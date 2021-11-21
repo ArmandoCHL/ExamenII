@@ -72,8 +72,6 @@
     <Build Include="dbo\Store Procedures\EditarOrden.sql" />
     <Build Include="dbo\Store Procedures\EliminarOrden.sql" />
     <Build Include="dbo\Store Procedures\InsertarOrden.sql" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="dbo\Store Procedures\EliminarProducto.sql" />
+    <Build Include="dbo\Store Procedures\EliminarProducto.sql" />
   </ItemGroup>
 </Project>
