@@ -42,7 +42,7 @@ namespace WBL
 
                 return await result;
             }
-            catch (Exception EX)
+            catch (Exception)
             {
 
                 throw;
@@ -75,7 +75,6 @@ namespace WBL
             {
                 var result = sql.ExecuteAsync("dbo.InsertarProducto", new
                 {
-                    entity.IdProducto,
                     entity.NombreProducto,
                     entity.PrecioProducto
 

@@ -1,6 +1,5 @@
 ﻿CREATE PROCEDURE [dbo].[InsertarProducto]
-	
-	@IdProducto int,	
+
 	@NombreProducto varchar(50),
 	@PrecioProducto decimal(18,2)
 
@@ -12,14 +11,11 @@ SET NOCOUNT ON
     BEGIN TRY
 	
 	INSERT INTO dbo.Producto
-	(IdProducto,
-	NombreProducto,
+	(NombreProducto,
 	PrecioProducto
 	)
 	VALUES
-	(
-	@IdProducto,
-	@NombreProducto,
+	(@NombreProducto,
 	@PrecioProducto
 	)
 

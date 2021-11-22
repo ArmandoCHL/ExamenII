@@ -1,6 +1,5 @@
 ﻿CREATE PROCEDURE [dbo].[InsertarOrden]
-	
-	@IdOrden int,
+
 	@IdProducto int,	
 	@CantidadProducto int,
 	@Estado varchar(25)
@@ -13,14 +12,12 @@ SET NOCOUNT ON
     BEGIN TRY
 	
 	INSERT INTO dbo.Orden
-	(IdOrden,
-	IdProducto,
+	(IdProducto,
 	CantidadProducto,
 	Estado
 	)
 	VALUES
-	(@IdOrden,
-	@IdProducto,
+	(@IdProducto,
 	@CantidadProducto,
 	@Estado
 	)

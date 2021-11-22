@@ -1,0 +1,62 @@
+﻿@page
+@model Web_ExamenII.Pages.Orden.EditModel
+@{
+}
+
+<div id="AppEdit" class="container">
+    <div class="card">
+        <div class="card-header">
+            @(Model.id.HasValue? "Actualizar": "Nueva Orden")
+        </div>
+        <div class="card-body">
+            <form id="FormEdit" method="post">
+                <input type="hidden" asp-for="Entity.IdOrden" />
+
+
+                <div class="form-group mb-3">
+                    <label for="Entity.Producto" class="form-label">Producto</label>
+
+                    <select asp-for="Entity.Producto" class="form-select"
+                            asp-items="@(new SelectList(Model.ProductoLista,"Producto","NombreProducto"))" required>
+                    </select>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="Entity.Producto" class="form-label">Producto</label>
+                    <input type="text" class="form-control" asp-for="Entity.Producto" maxlength="250" required>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="Entity.CantidadProducto" class="form-label">CantidadProduco</label>
+                    <input type="text" class="form-control" asp-for="Entity.CantidadProducto" maxlength="250" required>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="Entity.Estado" class="form-label">Estado</label>
+                    <input type="text" class="form-control" asp-for="Entity.Estado" maxlength="250" required>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-4">
+                        <button type="submit" class="btn btn-primary">
+                            @(Model.id.HasValue? "Actualizar": "Agregar")
+                        </button>
+                    </div>
+
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+</div>
+
+@section Scripts
+{
+
+    <script defer src="~/App/Empleado/Edit.js"></script>
+
+
+}

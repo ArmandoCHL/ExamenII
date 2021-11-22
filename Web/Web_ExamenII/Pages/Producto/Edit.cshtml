@@ -2,3 +2,46 @@
 @model Web_ExamenII.Pages.Producto.EditModel
 @{
 }
+
+<div id="AppEdit" class="container">
+    <div class="card">
+        <div class="card-header">
+            @(Model.id.HasValue? "Actualizar": "Nuevo Producto")
+        </div>
+        <div class="card-body">
+            <form id="FormEdit" method="post">
+                <input type="hidden" asp-for="Entity.IdProducto" />
+
+                <div class="form-group mb-3">
+                    <label for="Entity.NombreProducto" class="form-label">NombreProducto</label>
+                    <input type="text" class="form-control" asp-for="Entity.NombreProducto" maxlength="250" required>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="Entity.PrecioProducto" class="form-label">PrecioProducto</label>
+                    <input type="text" class="form-control" asp-for="Entity.PrecioProducto" maxlength="250" required>
+                </div>
+
+                <div class="row">
+                    <div class="col-4">
+                        <button type="submit" class="btn btn-primary">
+                            @(Model.id.HasValue? "Actualizar": "Agregar")
+                        </button>
+                    </div>
+
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+</div>
+
+@section Scripts
+{
+
+    <script defer src="~/App/Producto/Edit.js"></script>
+
+
+}
