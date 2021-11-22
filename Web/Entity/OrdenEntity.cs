@@ -10,7 +10,7 @@ namespace Entity
     {
         public OrdenEntity()
         {
-            Producto = Producto ?? new ProductoEntity();
+            Producto ??= new ProductoEntity();
         }
 
         public int? IdOrden { get; set; }
